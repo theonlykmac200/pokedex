@@ -1,8 +1,10 @@
 const express = require("express")
-const pokemon = require("./models/pokemon")
+const pokemon = require("./models/pokemon.js")
 const app = express()
 
 app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(express.static("public"))
 
 // follow I N D U C E
 
