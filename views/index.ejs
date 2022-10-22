@@ -17,10 +17,10 @@
     <body>
         <h1 class="h1-index">Pokemon collect them ALL!</h1>
         
-        <% for(let i = 0; i < pokemon.length; i++) {%>
+        <% for(let index = 0; index < pokemon.length; index++) {%>
         <div class="div-index">
-            <h3 class="h1-index"><%= pokemon[i].name%></h3>
-            <a href ="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a>
+            <h3 class="h1-index"><%= pokemon[index].name%></h3>
+            <a href ="/pokemon/<%=index%>"><img src="<%= pokemon[index].img%>"></a>
         </div>
         <%}%>
 

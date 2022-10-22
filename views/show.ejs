@@ -34,9 +34,11 @@
             Speed Points: <%=pokemon.stats.speed %> 
         </div>
         <div class="button-show">
-            <button><a href="/pokemon/edit">Edit This Pokemon</a></button>
-            <button><a href="/pokemon">Delete This Pokemon</a></button>
+            <button><a href="/pokemon/<%=index%>/edit">Edit This Pokemon</a></button>
             <button><a href="/pokemon/new">Add a New Pokemon</a></button>
+            <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
+                <input type ="submit" value="delete"/>
+            </form>
         </div>   
     </body>
 </html>

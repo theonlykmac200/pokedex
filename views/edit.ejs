@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chosen Pokedex</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <nav class ="nav-edit">
+        <button class="button-edit"><a href="/pokemon">Head Back to All Pokemon</a></button> 
+        </nav>
+        <h1>Edit this Pokemon</h1>
+        <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%= pokemon.name%>" /><br />
+            Upload Image URL:<input type="text" name="img" value="<%= pokemon.img%>"><br/>
+            Types: <input type="text"  name="type" value="<%= pokemon.type%>" /><br />
+            Defense: <input type="text" name="defense"value="<%= pokemon.stats.defense%>" /><br />
+            Attack: <input type="text" name="attack" name=value="<%= pokemon.stats.attack%>" /><br />
+            Health Points: <input type="text" name="hp" value="<%= pokemon.stats.hp%>" /><br />
+            Speed Points:  <input type="text" name="speed" value="<%= pokemon.stats.speed%>" /><br />
+            <input type="submit"  value="Update My Pokemon!" />
+        </form>
+        
+    </body>
+</html>
