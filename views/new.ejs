@@ -10,28 +10,24 @@
         <title>Add to the Pokedex</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style type="text/css">
-            body{
-                    background-color: cornflowerblue;
-                }
-                h1{
-                    color:lightsalmon
-                }
-          </style>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
+
         <body>
             <h1>Give Me More Pokemon</h1>
             <form action="/pokemon" method="POST">
                 Name: <input type="text" name="name" /><br />
-                Upload Image URL:<input type ="text" name="img">
+                Upload Image URL:<input type ="text" name="img"><br/>
                 Types: <input type="text" name="type" /><br />
-                <input type="text" name="type" /><br />
-                <input type="text" name="type" /><br />
                 Defense: <input type="text" name="defense" /><br />
                 Attack: <input type="text" name="attack" /><br />
                 Health Points: <input type="text" name="health" /><br />
-                <input type="submit" name="create" value="Add This Rockstar Pokemon!" />
+                Speed Points:  <input type="text" name="Speed" /><br />
+                <input type="submit" name="create" value="Add My New Pokemon!" />
             </form>
+            <button class="button-new"><a href="/pokemon">Head Back to All Pokemon</a></button>
         </body>
 </html>

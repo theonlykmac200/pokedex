@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;1,100&family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Permanent+Marker&family=Poiret+One&display=swap');
+
+body {
+    background-color: rgb(217, 210, 230);
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+/* index */
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0em;
+
+}
+.div-index {
+    display: inline-block; 
+    align-content: space-between;
+    
+}
+.h1-index, .h1-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-index {
+    font-weight: bold;
+}
+.nav-show {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+}
+.div-show {
+    display: flex;
+    justify-content: center;
+}
+.button-show {
+   
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}

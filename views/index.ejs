@@ -10,26 +10,20 @@
         <title>Pokedex</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style type="text/css">
-                body{
-                    background-color: cornflowerblue;
-                }
-                h1{
-                    color:lightsalmon
-                }
-          </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>Pokemon collect them ALL!</h1>
+        <h1 class="h1-index">Pokemon collect them ALL!</h1>
         
         <% for(let i = 0; i < pokemon.length; i++) {%>
-            
-            
-            <h3><%= pokemon[i].name%></h3>
-            <li><a href ="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a></li>
+        <div class="div-index">
+            <h3 class="h1-index"><%= pokemon[i].name%></h3>
+            <a href ="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a>
+        </div>
         <%}%>
 
-        <button><a href ="/pokemon/new">Add a New Pokemon</a> </button> 
+        <button class="div-button"><a href ="/pokemon/new">Add a New Pokemon</a> </button> 
     </body>
 </html>

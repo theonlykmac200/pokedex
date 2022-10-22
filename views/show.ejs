@@ -10,26 +10,33 @@
         <title>Chosen Pokedex</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style type="text/css">
-             body{
-                    background-color: cornflowerblue;
-                }
-                h1{
-                    color:lightsalmon
-                }  
-          </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <nav>
-            <a href="/pokemon">Head Back to All Pokemon</a>
-          </nav>
-          <h1><%=pokemon.name %></h1> 
-          <br/>
-          <img src="<%= pokemon.img%>">
-          <br/>
-          Defense: <%= pokemon.defense%>
-          <br />
-          Attack: <%= pokemon.attack %>
+        <nav class ="nav-show">
+        <button class="button-show"><a href="/pokemon">Head Back to All Pokemon</a></button> 
+        </nav>
+       
+        <h1 class="h1-show"><%=pokemon.name%></h1> 
+        <div class="div-show">
+            <img src="<%=pokemon.img%>">
+            <br/>
+            Defense: <%=pokemon.stats.defense%>
+            <br />
+            Attack: <%=pokemon.stats.attack %>
+            <br/> 
+            Type: <%=pokemon.type %>
+            <br/>
+            Health Points: <%=pokemon.stats.hp %>
+            <br/>
+            Speed Points: <%=pokemon.stats.speed %> 
+        </div>
+        <div class="button-show">
+            <button><a href="/pokemon/edit">Edit This Pokemon</a></button>
+            <button><a href="/pokemon">Delete This Pokemon</a></button>
+            <button><a href="/pokemon/new">Add a New Pokemon</a></button>
+        </div>   
     </body>
 </html>
