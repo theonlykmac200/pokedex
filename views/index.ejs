@@ -21,10 +21,15 @@
           </style>
     </head>
     <body>
-        <h1>My Top 50 pokemon</h1>
+        <h1>Pokemon collect them ALL!</h1>
+        
         <% for(let i = 0; i < pokemon.length; i++) {%>
-            <li><a href ="/pokemon/<%=i%>"></a><%= pokemon[i].name%></li></a>
+            
+            
+            <h3><%= pokemon[i].name%></h3>
+            <li><a href ="/pokemon/<%=i%>"><img src="<%= pokemon[i].img%>"></a></li>
         <%}%>
 
+        <button><a href ="/pokemon/new">Add a New Pokemon</a> </button> 
     </body>
 </html>

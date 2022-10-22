@@ -12,6 +12,7 @@ app.get("/pokemon", (req, res) => {
     res.render("index.ejs", {
         pokemon: pokemon
     })
+    console.log(pokemon)
 })
 
 app.get("/pokemon/new", (req, res) => {
@@ -19,12 +20,18 @@ app.get("/pokemon/new", (req, res) => {
 })
 
 app.get("/pokemon/:id", (req, res) => {
-    res.render("show.ejs" , {
-        pokemon: pokemon[req.params.id]
-    })
+  res.render("show.ejs", {
+    pokemon : pokemon[req.params.id]
+  })
+})  
+
+app.post("/pokemon", (req, res) => {
+    console.log(req.body)
+    pokemon.push (req.body)
+        res.redirect("/pokemon/")
 })
 
-
+console.log(pokemon)
 
 
 
