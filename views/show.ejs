@@ -18,21 +18,22 @@
         <nav class ="nav-show">
         <button class="button-show"><a href="/pokemon">Head Back to All Pokemon</a></button> 
         </nav>
-       
-        <h1 class="h1-show"><%=pokemon.name%></h1> 
-        <div class="div-show">
-            
-            <img src="<%=pokemon.img%>">
-            <br/>
-            Defense: <%=pokemon.stats.defense%>
-            <br />
-            Attack: <%=pokemon.stats.attack %>
-            <br/> 
-            Type: <%=pokemon.type %>
-            <br/>
-            Health Points: <%=pokemon.stats.hp %>
-            <br/>
-            Speed Points: <%=pokemon.stats.speed %> 
+        <div class="show-card">
+            <h1 class="h1-show"><%=pokemon.name%></h1> 
+            <div class="div-show">
+                
+                <img src="<%=pokemon.img%>">
+                <br/>
+                Defense: <%=pokemon.stats.defense%>
+                <br />
+                Attack: <%=pokemon.stats.attack %>
+                <br/> 
+                Type: <%=pokemon.type[0] %>
+                <br/>
+                Health Points: <%=pokemon.stats.hp %>
+                <br/>
+                Speed Points: <%=pokemon.stats.speed %> 
+            </div>
         </div>
         <div class="button-show">
             <button><a href="/pokemon/<%=index%>/edit">Edit This Pokemon</a></button>
@@ -40,6 +41,7 @@
             <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
                 <input type ="submit" value="delete"/>
             </form>
-        </div>   
+        </div> 
+        
     </body>
 </html>
