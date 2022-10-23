@@ -18,17 +18,45 @@
         <nav class ="nav-edit">
         <button class="button-edit"><a href="/pokemon">Head Back to All Pokemon</a></button> 
         </nav>
-        <h1>Edit this Pokemon</h1>
-        <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%= pokemon.name%>" /><br />
-            Upload Image URL:<input type="text" name="img" value="<%= pokemon.img%>"><br/>
-            Types: <input type="text"  name="type" value="<%= pokemon.type%>" /><br />
-            Defense: <input type="text" name="defense"value="<%= pokemon.stats.defense%>" /><br />
-            Attack: <input type="text" name="attack" name=value="<%= pokemon.stats.attack%>" /><br />
-            Health Points: <input type="text" name="hp" value="<%= pokemon.stats.hp%>" /><br />
-            Speed Points:  <input type="text" name="speed" value="<%= pokemon.stats.speed%>" /><br />
-            <input type="submit"  value="Update My Pokemon!" />
-        </form>
-        
+        <h1 class="edit-h1">Edit this Pokemon</h1>
+        <div class="div-edit">
+            <img src="<%=pokemon.img%>">
+            <br/>
+                <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+                    <div class="div-edit"> 
+                        <h4>Name:</h4> <br/>
+                        <input type="text" name="name" value="<%= pokemon.name%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Image:</h4> <br/>
+                        <input type="text" name="img" value="<%= pokemon.img%>"><br/>
+                    </div>
+                    <div class="div-edit">
+                        <h4>Type:</h4> <br/>
+                        <input type="text"  name="type" value="<%= pokemon.type%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Type:</h4><br/>
+                        <input type="text"  name="type" value="<%= pokemon.type%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Defense:</h4><br/>
+                        <input type="text" name="defense"value="<%= pokemon.stats.defense%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Attack:</h4><br/>
+                        <input type="text" name="attack" name=value="<%= pokemon.stats.attack%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Health:</h4><br/>
+                        <input type="text" name="hp" value="<%= pokemon.stats.hp%>" /><br />
+                    </div>
+                    <div class="div-edit">
+                        <h4>Speed:</h4><br/>
+                        <input type="text" name="speed" value="<%= pokemon.stats.speed%>" /><br />
+                    </div>
+                    <input type="submit"  value="Update My Pokemon!" />
+                </form>
+        </div>
     </body>
 </html>

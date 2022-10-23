@@ -20,7 +20,7 @@ img {
     align-content: space-between;
     
 }
-.h1-index, .h1-show {
+.h1-index, .h1-show, .edit-h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ img {
     align-content: space-between;
     width: 100%;
 }
-.div-show {
+.div-show{
     display: flex;
     justify-content: center;
 }
@@ -43,4 +43,20 @@ img {
     display: flex;
     justify-content: center;
     align-content: space-between;
+}
+
+.div-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 1em .5em 0;
+    flex: 1;
+
+}
+.div-edit > input {
+    flex: 2;
+}
+
+input {
+    display: inline-block;
 }

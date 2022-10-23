@@ -17,8 +17,11 @@
     </head>
 
         <body>
+            <nav class ="nav-new">
+                <button class="button-new"><a href="/pokemon">Head Back to All Pokemon</a></button> 
+            </nav>
             <h1>Give Me More Pokemon</h1>
-            <form action="/pokemon" method="POST">
+            <form class="form-new" action="/pokemon" method="POST">
                 Name: <input type="text" name="name" /><br />
                 Upload Image URL:<input type ="text" name="img"><br/>
                 Types: <input type="text" name="type" /><br />
@@ -28,6 +31,6 @@
                 Speed Points:  <input type="text" name="Speed" /><br />
                 <input type="submit" name="create" value="Add My New Pokemon!" />
             </form>
-            <button class="button-new"><a href="/pokemon">Head Back to All Pokemon</a></button>
+    
         </body>
 </html>
