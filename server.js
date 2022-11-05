@@ -48,15 +48,31 @@ app.put('/pokemon/:index', (req, res) => {
         stats: stats,
     }
     pokemon[parseInt(req.params.index)]= updatedPokemon
-    
-    res.redirect("/pokemon")
+    //i would redirect to the show so user can see all new changes right away
+    res.redirect(`/pokemon/${req.params.index}`)
 })
 
  
 //create
 app.post("/pokemon", (req, res) => {
+    //this is not working, you need to do the same thing as put route
+    //check type it is only displaying the first letter
+    console.log(req.body.type)
+    //i fixed the show page to fix that
+    let newPokemon = {
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense,
+            hp: req.body.hp,
+            speed: req.body.speed,
+        }
+    }
     console.log(req.body)
-    pokemon.push (req.body)
+    pokemon.push(newPokemon)
         res.redirect("/pokemon")
 })
 
@@ -75,11 +91,6 @@ app.get("/pokemon/:index", (req, res) => {
       index: parseInt(req.params.index)
     })
   }) 
-
-
-
-
-
 app.listen(3000, () => {
     console.log("get ready for a battle")
 })
